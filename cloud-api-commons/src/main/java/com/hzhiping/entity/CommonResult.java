@@ -13,10 +13,40 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class CommonResult<T> {
     private Integer code;
-    private String message;
+    private String msg;
     private T data;
 
-    public CommonResult(Integer code, String message) {
-        this(code, message, null);
+    public CommonResult(Integer code, String msg) {
+        this(code, msg, null);
+    }
+
+    /**
+     * 操作成功
+     *
+     * @param msg  消息
+     * @param data 泛型对象
+     * @return {@link CommonResult}<{@link T}>
+     */
+    public static <T> CommonResult<T> success(String msg, T data) {
+        CommonResult<T> result = new CommonResult<>();
+        result.code = 200;
+        result.msg = msg;
+        result.data = data;
+        return result;
+    }
+
+    /**
+     * 操作失败，异常传递
+     *
+     * @param code 异常代码
+     * @param msg  异常消息
+     * @return {@link CommonResult}<{@link T}>
+     */
+    public static <T> CommonResult<T> failed(Integer code, String msg) {
+        CommonResult<T> result = new CommonResult<>();
+        result.code = code;
+        result.msg = msg;
+        result.data = null;
+        return result;
     }
 }
