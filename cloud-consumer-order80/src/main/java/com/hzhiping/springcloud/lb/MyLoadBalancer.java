@@ -1,10 +1,16 @@
 package com.hzhiping.springcloud.lb;
 
 import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ * @author hzhiping
+ * @date 2023/02/11
+ */
+@Component
 public class MyLoadBalancer implements LoadBalancer {
     private AtomicInteger atomicInteger = new AtomicInteger(0);
 
