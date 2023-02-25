@@ -1,0 +1,24 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name:  cloud-config-center #注册进Eureka服务器的微服务名
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/hzhiping/learn-cloud-alibaba-config.git #GitHub上面的git仓库名字
+          basedir: /Users/hzhiping/git-repo/learn-cloud-alibaba-config
+          default-label: main
+          ####搜索目录（需要引入RabbitMQ）
+          #search-paths:
+            #- learn-cloud-alibaba-config
+      ####读取分支
+      label: main
+
+#服务注册到eureka地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
