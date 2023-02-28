@@ -12,13 +12,33 @@ spring:
           basedir: /Users/hzhiping/git-repo/learn-cloud-alibaba-config
           default-label: main
           ####搜索目录（需要引入RabbitMQ）
-          #search-paths:
-            #- learn-cloud-alibaba-config
+          search-paths:
+            - learn-cloud-alibaba-config
       ####读取分支
       label: main
+  #rabbitmq相关配置
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 #服务注册到eureka地址
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka
+
+##rabbitmq相关配置，暴露bus刷新配置的端点
+management:
+  endpoint:
+    health:
+      enabled: true
+    prometheus:
+      enabled: true
+    metrics:
+      enabled: true
+  endpoints: #暴露bus刷新配置的端点
+    web:
+      exposure:
+        include: "*"
