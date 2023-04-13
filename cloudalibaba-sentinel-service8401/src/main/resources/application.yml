@@ -10,7 +10,7 @@ spring:
         server-addr: localhost:8088 #Nacos服务注册中心地址，这边配置成集群的模式
     sentinel:
       transport:
-        dashboard: localhost:8180   #配置Sentinel dashboard地址
+        dashboard: localhost:8180   #配置Sentinel Dashboard地址
         port: 8719
       datasource:
         flow:
