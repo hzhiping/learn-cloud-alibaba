@@ -25,6 +25,17 @@ public class OrderFeignController {
         return paymentFeignService.getPaymentById(id);
     }
 
+    @GetMapping(value = "/consumer/payment/getWithHeader/{id}")
+    public CommonResult<Payment> getPaymentByIdWithHeader(@PathVariable("id") Long id) {
+        return paymentFeignService.getPaymentByIdWithHeader(id);
+    }
+
+    @GetMapping(value = "/consumer/payment/getWithHeaderAnno/{id}")
+    public CommonResult<Payment> getPaymentByIdWithHeaderAnno(@PathVariable("id") Long id) {
+        //return paymentFeignService.getPaymentByIdWithHeaderAnno(id);
+        return null;
+    }
+
     @GetMapping(value = "/consumer/payment/feign/timeout")
     public String paymentFeignTimeout() {
         //OpenFeign客户端一般默认等待1秒钟
