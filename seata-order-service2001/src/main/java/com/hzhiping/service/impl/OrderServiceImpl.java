@@ -28,6 +28,8 @@ public class OrderServiceImpl implements OrderService {
     /**
      * 创建订单->调用库存服务扣减库存->调用账户服务扣减账户余额->修改订单状态
      * 简单说：下订单->扣库存->减余额->改状态
+     *
+     * @param order 订单信息
      */
     @Override
     @GlobalTransactional(name = "fsp-create-order", rollbackFor = Exception.class)
