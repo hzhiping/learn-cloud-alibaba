@@ -19,11 +19,22 @@ logging:
     #feign日志以什么级别监控哪个接口
     com.hzhiping.service.PaymentFeignService: debug
 
+#region 局部设置OpenFeign超时时间修改配置文件的方式
+#feign:
+#  client:
+#    config:
+#      cloud-payment-service:  #服务提供方的名字
+#        logger-level: BASIC
+#        connect-timeout: 5000 #连接超时的时间，默认为2秒，单位：毫秒
+#        read-timeout: 3000    #请求处理超时时间，默认为5秒，单位：毫秒
+#        retryer: 2            #重试
+#endregion
+
+#region 局部设置OpenFeign超时时间修改配置文件的方式
 feign:
   client:
     config:
       cloud-payment-service:  #服务提供方的名字
         logger-level: BASIC
-        connect-timeout: 5000 #连接超时的时间，默认为2秒，单位：毫秒
-        read-timeout: 3000    #请求处理超时时间，默认为5秒，单位：毫秒
-        retryer: 2            #重试
+        contract: feign.Contract.Default
+#endregion

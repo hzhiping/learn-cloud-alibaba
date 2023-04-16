@@ -1,7 +1,9 @@
 package com.hzhiping.config;
 
 import com.hzhiping.interceptor.PaymentFeignInterceptor;
+import feign.Contract;
 import feign.Logger;
+import feign.Request;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,7 +15,7 @@ import org.springframework.core.env.Environment;
  * @date 2023/02/12
  */
 @SuppressWarnings("ALL")
-@Configuration
+@Configuration //如果不希望是全局生效的话，就不要加上@Configuration注解
 @PropertySource(value = {"classpath:auth.properties"})
 public class FeignConfig {
     @Autowired
@@ -35,8 +37,13 @@ public class FeignConfig {
      *
      * @return feign的契约
      */
-    //@Bean
-    //public Contract feignContract() {
-    //    return new Contract.Default();
-    //}
+    @Bean
+    public Contract feignContract() {
+        return new Contract.Default();
+    }
+
+    @Bean
+    public Request.Options options() {
+        return new Request.Options(5000, 4000);
+    }
 }
