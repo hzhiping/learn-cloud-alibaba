@@ -1,12 +1,13 @@
 package com.hzhiping.controller;
 
-import com.hzhiping.domain.CommonResult;
-import com.hzhiping.domain.Order;
-import com.hzhiping.service.OrderService;
+import javax.annotation.Resource;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.annotation.Resource;
+import com.hzhiping.domain.CommonResult;
+import com.hzhiping.domain.Order;
+import com.hzhiping.service.OrderService;
 
 /**
  * @author hzhiping
@@ -16,7 +17,6 @@ import javax.annotation.Resource;
 public class OrderController {
     @Resource
     private OrderService orderService;
-
 
     @GetMapping("/order/create")
     public CommonResult create(Order order) {

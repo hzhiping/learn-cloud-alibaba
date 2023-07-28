@@ -1,9 +1,9 @@
 package com.hzhiping.dao;
 
+import java.math.BigDecimal;
+
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-
-import java.math.BigDecimal;
 
 /**
  * @author hzhiping
@@ -15,7 +15,7 @@ public interface AccountDao {
      * 扣减账户余额
      *
      * @param userId 用户ID
-     * @param money  钱
+     * @param money 钱
      */
     void decrease(@Param("userId") Long userId, @Param("money") BigDecimal money);
 }

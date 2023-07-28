@@ -34,7 +34,7 @@ logging:
 feign:
   client:
     config:
-      cloud-payment-service:  #服务提供方的名字
+      cloud-payment-service: #服务提供方的名字
         logger-level: BASIC
         contract: feign.Contract.Default
 #endregion

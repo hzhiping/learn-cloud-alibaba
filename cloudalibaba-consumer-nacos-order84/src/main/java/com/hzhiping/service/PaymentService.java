@@ -1,10 +1,11 @@
 package com.hzhiping.service;
 
-import com.hzhiping.entity.CommonResult;
-import com.hzhiping.entity.Payment;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+
+import com.hzhiping.entity.CommonResult;
+import com.hzhiping.entity.Payment;
 
 /**
  * @author hzhiping

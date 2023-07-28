@@ -12,7 +12,6 @@ import lombok.Data;
 public class PaymentFeignInterceptor implements RequestInterceptor {
     private String authorization;
 
-
     public PaymentFeignInterceptor(String authorization) {
         this.authorization = authorization;
     }

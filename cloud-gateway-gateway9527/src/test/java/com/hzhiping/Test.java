@@ -8,9 +8,9 @@ import java.time.ZonedDateTime;
  */
 public class Test {
     public static void main(String[] args) {
-        //默认时区
+        // 默认时区
         ZonedDateTime zbj = ZonedDateTime.now();
         System.out.println(zbj);
-        //2020-02-21T15:51:37.485+08:00[Asia/Shanghai]
+        // 2020-02-21T15:51:37.485+08:00[Asia/Shanghai]
     }
 }

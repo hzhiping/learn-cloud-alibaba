@@ -1,13 +1,13 @@
 package com.hzhiping.service.impl;
 
-import com.hzhiping.dao.StorageDao;
-import com.hzhiping.service.StorageService;
+import javax.annotation.Resource;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
-
+import com.hzhiping.dao.StorageDao;
+import com.hzhiping.service.StorageService;
 
 /**
  * @author hzhiping

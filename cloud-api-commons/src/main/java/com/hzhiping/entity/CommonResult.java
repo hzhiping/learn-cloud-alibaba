@@ -23,7 +23,7 @@ public class CommonResult<T> {
     /**
      * 操作成功
      *
-     * @param msg  消息
+     * @param msg 消息
      * @param data 泛型对象
      * @return {@link CommonResult}<{@link T}>
      */
@@ -39,7 +39,7 @@ public class CommonResult<T> {
      * 操作失败，异常传递
      *
      * @param code 异常代码
-     * @param msg  异常消息
+     * @param msg 异常消息
      * @return {@link CommonResult}<{@link T}>
      */
     public static <T> CommonResult<T> failed(Integer code, String msg) {

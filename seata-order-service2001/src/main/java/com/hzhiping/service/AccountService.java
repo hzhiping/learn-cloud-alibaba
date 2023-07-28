@@ -1,11 +1,12 @@
 package com.hzhiping.service;
 
-import com.hzhiping.domain.CommonResult;
+import java.math.BigDecimal;
+
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.math.BigDecimal;
+import com.hzhiping.domain.CommonResult;
 
 /**
  * @author hzhiping

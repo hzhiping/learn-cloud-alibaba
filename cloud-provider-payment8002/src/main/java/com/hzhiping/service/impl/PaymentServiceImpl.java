@@ -1,11 +1,12 @@
 package com.hzhiping.service.impl;
 
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
 import com.hzhiping.dao.PaymentDao;
 import com.hzhiping.entity.Payment;
 import com.hzhiping.service.PaymentService;
-import org.springframework.stereotype.Service;
-
-import javax.annotation.Resource;
 
 /**
  * @author hzhiping

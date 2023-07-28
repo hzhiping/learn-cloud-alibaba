@@ -1,10 +1,11 @@
 package com.hzhiping.controller;
 
-import com.hzhiping.service.MessageProvider;
+import javax.annotation.Resource;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.annotation.Resource;
+import com.hzhiping.service.MessageProvider;
 
 /**
  * @author hzhiping

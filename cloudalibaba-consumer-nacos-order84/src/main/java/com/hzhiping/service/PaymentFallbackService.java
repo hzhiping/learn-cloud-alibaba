@@ -1,8 +1,9 @@
 package com.hzhiping.service;
 
+import org.springframework.stereotype.Component;
+
 import com.hzhiping.entity.CommonResult;
 import com.hzhiping.entity.Payment;
-import org.springframework.stereotype.Component;
 
 /**
  * @author hzhiping

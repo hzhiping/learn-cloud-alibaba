@@ -12,7 +12,7 @@ import org.springframework.web.client.RestTemplate;
 @Configuration
 public class ApplicationContextConfig {
     @Bean
-    @LoadBalanced //如果开启负载均衡不加此注解，将导致java.net.UnknownHostException: CLOUD-PAYMENT-SERVICE with root cause
+    @LoadBalanced // 如果开启负载均衡不加此注解，将导致java.net.UnknownHostException: CLOUD-PAYMENT-SERVICE with root cause
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }

@@ -1,10 +1,10 @@
 package com.hzhiping.service;
 
-import com.hzhiping.domain.CommonResult;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.hzhiping.domain.CommonResult;
 
 /**
  * @author hzhiping

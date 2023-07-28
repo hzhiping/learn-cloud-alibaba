@@ -1,10 +1,11 @@
 package com.hzhiping.controller;
 
-import com.hzhiping.domain.CommonResult;
-import com.hzhiping.service.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.hzhiping.domain.CommonResult;
+import com.hzhiping.service.StorageService;
 
 /**
  * @author hzhiping
@@ -19,7 +20,7 @@ public class StorageController {
      * 扣减库存
      *
      * @param productId 产品ID
-     * @param count     数量
+     * @param count 数量
      * @return {@link CommonResult}
      */
     @RequestMapping("/storage/decrease")

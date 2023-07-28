@@ -14,9 +14,7 @@ public class GateWayConfig {
     @Bean
     public RouteLocator customRouteLocator(RouteLocatorBuilder routeLocatorBuilder) {
         RouteLocatorBuilder.Builder routes = routeLocatorBuilder.routes();
-        routes.route("path_route_hzhiping",
-                r -> r.path("/dashboard")
-                        .uri("https://gitee.com/dashboard")).build();
+        routes.route("path_route_hzhiping", r -> r.path("/dashboard").uri("https://gitee.com/dashboard")).build();
         return routes.build();
     }
 }

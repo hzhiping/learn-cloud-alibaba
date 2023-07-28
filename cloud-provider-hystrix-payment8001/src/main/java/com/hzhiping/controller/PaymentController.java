@@ -1,13 +1,15 @@
 package com.hzhiping.controller;
 
-import com.hzhiping.service.PaymentService;
-import lombok.extern.slf4j.Slf4j;
+import javax.annotation.Resource;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.annotation.Resource;
+import com.hzhiping.service.PaymentService;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author hzhiping
@@ -35,7 +37,6 @@ public class PaymentController {
         log.info("*****result：" + result);
         return result;
     }
-
 
     /**
      * 服务熔断

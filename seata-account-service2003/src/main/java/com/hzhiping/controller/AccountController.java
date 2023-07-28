@@ -1,13 +1,15 @@
 package com.hzhiping.controller;
 
-import com.hzhiping.domain.CommonResult;
-import com.hzhiping.service.AccountService;
+import java.math.BigDecimal;
+
+import javax.annotation.Resource;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.annotation.Resource;
-import java.math.BigDecimal;
+import com.hzhiping.domain.CommonResult;
+import com.hzhiping.service.AccountService;
 
 @RestController
 public class AccountController {
@@ -19,7 +21,7 @@ public class AccountController {
      * 扣减账户余额
      *
      * @param userId 用户ID
-     * @param money  价格
+     * @param money 价格
      * @return {@link CommonResult}
      */
     @RequestMapping("/account/decrease")

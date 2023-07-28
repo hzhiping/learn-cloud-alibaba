@@ -9,5 +9,4 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @MapperScan({"com.hzhiping.dao"})
-public class MyBatisConfig {
-}
+public class MyBatisConfig {}

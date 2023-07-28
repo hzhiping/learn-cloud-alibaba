@@ -1,8 +1,9 @@
 package com.hzhiping.dao;
 
-import com.hzhiping.domain.Order;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+
+import com.hzhiping.domain.Order;
 
 /**
  * @author hzhiping

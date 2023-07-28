@@ -1,13 +1,15 @@
 package com.hzhiping.service.impl;
 
-import com.hzhiping.service.MessageProvider;
+import java.util.UUID;
+
+import javax.annotation.Resource;
+
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.messaging.Source;
 import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.support.MessageBuilder;
 
-import javax.annotation.Resource;
-import java.util.UUID;
+import com.hzhiping.service.MessageProvider;
 
 /**
  * @author hzhiping

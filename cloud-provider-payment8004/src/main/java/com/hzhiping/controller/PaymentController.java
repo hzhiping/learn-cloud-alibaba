@@ -1,11 +1,12 @@
 package com.hzhiping.controller;
 
-import lombok.extern.slf4j.Slf4j;
+import java.util.UUID;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.UUID;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author hzhiping
