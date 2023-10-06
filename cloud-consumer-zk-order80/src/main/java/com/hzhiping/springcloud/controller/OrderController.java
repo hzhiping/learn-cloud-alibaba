@@ -1,12 +1,11 @@
 package com.hzhiping.springcloud.controller;
 
-import javax.annotation.Resource;
-
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import lombok.extern.slf4j.Slf4j;
+import javax.annotation.Resource;
 
 /**
  * @author hzhiping
@@ -21,7 +20,6 @@ public class OrderController {
 
     @GetMapping(value = "/consumer/payment/zk")
     public String paymentInfo() {
-        String result = restTemplate.getForObject(INVOKE_URL + "/payment/zk", String.class);
-        return result;
+        return restTemplate.getForObject(INVOKE_URL + "/payment/zk", String.class);
     }
 }
