@@ -1,11 +1,10 @@
 package com.hzhiping.controller;
 
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-
+import com.hzhiping.entity.CommonResult;
+import com.hzhiping.entity.Payment;
+import com.hzhiping.entity.User;
+import com.hzhiping.service.PaymentService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -14,11 +13,10 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
-import com.hzhiping.entity.CommonResult;
-import com.hzhiping.entity.Payment;
-import com.hzhiping.service.PaymentService;
-
-import lombok.extern.slf4j.Slf4j;
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author hzhiping
@@ -48,8 +46,7 @@ public class PaymentController {
 
     @GetMapping(value = "/payment/get/{id}")
     public CommonResult<Payment> getPaymentById(@PathVariable("id") Long id, @RequestHeader HttpHeaders headers) {
-        ServletRequestAttributes requestAttributes =
-            (ServletRequestAttributes)RequestContextHolder.getRequestAttributes();
+        ServletRequestAttributes requestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = requestAttributes.getRequest();
         String header = request.getHeader("Authorization");
         System.out.println("=======" + header);
@@ -69,8 +66,7 @@ public class PaymentController {
         }
         List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PAYMENT-SERVICE");
         for (ServiceInstance instance : instances) {
-            log.info(instance.getServiceId() + "\t" + instance.getHost() + "\t" + instance.getPort() + "\t"
-                + instance.getUri());
+            log.info(instance.getServiceId() + "\t" + instance.getHost() + "\t" + instance.getPort() + "\t" + instance.getUri());
         }
         return this.discoveryClient;
     }
@@ -99,6 +95,19 @@ public class PaymentController {
     @GetMapping("/payment/zipkin")
     public String paymentZipkin() {
         return "hi, I am paymentzipkin server fall back, welcome to hzhiping, O(∩_∩)O哈哈~";
+    }
+
+    /**
+     * 获取用户
+     *
+     * @return {@link CommonResult}<{@link User}>
+     */
+    @PostMapping("/getUser")
+    public CommonResult<User> getUser() {
+        User user = new User();
+        user.setAge(11);
+        user.setName("hzhiping");
+        return CommonResult.success("", user);
     }
 
 }

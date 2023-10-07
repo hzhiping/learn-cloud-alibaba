@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import com.hzhiping.entity.User;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -94,6 +95,19 @@ public class PaymentController {
     @GetMapping("/payment/zipkin")
     public String paymentZipkin() {
         return "hi, I am paymentzipkin server fall back, welcome to hzhiping, O(∩_∩)O哈哈~";
+    }
+
+    /**
+     * 获取用户
+     *
+     * @return {@link CommonResult}<{@link User}>
+     */
+    @PostMapping("/getUser")
+    public CommonResult<User> getUser() {
+        User user = new User();
+        user.setAge(11);
+        user.setName("hzhiping");
+        return CommonResult.success("", user);
     }
 
 }
