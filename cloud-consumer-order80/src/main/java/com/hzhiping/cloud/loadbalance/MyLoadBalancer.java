@@ -1,4 +1,4 @@
-package com.hzhiping.springcloud.lb;
+package com.hzhiping.cloud.loadbalance;
 
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;

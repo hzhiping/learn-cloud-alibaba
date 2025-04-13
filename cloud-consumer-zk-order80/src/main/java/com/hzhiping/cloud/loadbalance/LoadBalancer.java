@@ -1,8 +1,8 @@
-package com.hzhiping.springcloud.lb;
-
-import java.util.List;
+package com.hzhiping.cloud.loadbalance;
 
 import org.springframework.cloud.client.ServiceInstance;
+
+import java.util.List;
 
 /**
  * @author hzhiping

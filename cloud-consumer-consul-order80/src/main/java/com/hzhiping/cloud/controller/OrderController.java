@@ -1,4 +1,4 @@
-package com.hzhiping.springcloud.controller;
+package com.hzhiping.cloud.controller;
 
 import javax.annotation.Resource;
 

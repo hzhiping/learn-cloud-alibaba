@@ -1,4 +1,4 @@
-package com.hzhiping.springcloud.controller;
+package com.hzhiping.cloud.controller;
 
 import java.net.URI;
 import java.util.List;
@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
 
 import com.hzhiping.entity.CommonResult;
 import com.hzhiping.entity.Payment;
-import com.hzhiping.springcloud.lb.LoadBalancer;
+import com.hzhiping.cloud.loadbalance.LoadBalancer;
 
 import lombok.extern.slf4j.Slf4j;
 

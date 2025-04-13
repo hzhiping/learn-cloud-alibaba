@@ -1,4 +1,4 @@
-package com.hzhiping.springcloud.controller;
+package com.hzhiping.cloud.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;

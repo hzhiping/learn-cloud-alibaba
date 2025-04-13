@@ -18,28 +18,28 @@
     </properties>
 
     <dependencies>
-        <!--SpringCloud OpenFeign-->
+        <!-- 引入 SpringCloud OpenFeign 组件 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
-        <!--SpringCloud Alibaba Nacos-->
+        <!-- 引入 SpringCloud Alibaba Nacos 组件 -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
-        <!--SpringCloud Alibaba Sentinel-->
+        <!-- 引入 SpringCloud Alibaba Sentinel 的组件 -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
         </dependency>
-        <!--引入自己定义的api通用包，可以使用Payment支付Entity-->
+        <!-- 引入自己定义的 API 通用包，可以使用 Payment 支付 Entity 模块 -->
         <dependency>
             <groupId>com.hzhiping</groupId>
             <artifactId>cloud-api-commons</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <!--SpringBoot整合Web组件-->
+        <!-- 引入 SpringBoot 整合 Web 组件 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -48,7 +48,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-        <!--日常通用jar包配置-->
+        <!-- 日常通用 jar 包配置 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
